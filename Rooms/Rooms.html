@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Rooms.css">
+    <title>HotelZ</title>
+</head>
+<body>
+    <div class="container">
+        <header class="navigation">
+            <img src="images/hotelz-favicon-color.png" alt="Logo">
+            <nav>
+                <a href="../Landing Page/LandingPage.html">Home</a>
+                <a href="#about-us">About us</a>
+                <a href="#">Contact</a>
+                <a href="#">Rooms</a>
+                <a href="../registration/login.html">Login</a>
+            </nav>
+        </header>
+
+        <div class="rooms-container" id="roomsContainer">
+            
+        </div>
+        <div id="reservationModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <img src="Images/hotelz-favicon-color.png" alt="Logo" id="logoImg">
+                <h2>Book a Room </h2>
+                <form id="reservationForm">
+                    <input type="hidden" id="roomNumber" name="roomNumber">
+                    <label for="checkIn">Check-in:</label>
+                    <input type="date" id="checkIn" name="checkIn" required>
+                    <label for="checkOut">Check-out:</label>
+                    <input type="date" id="checkOut" name="checkOut" required>
+                    <button type="submit">Confirmar Reserva</button>
+                    <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+                </form>
+                <p id="confirmationMessage" style="display: none;"></p>
+            </div>
+        </div>
+    </div>
+    <script src="rooms.js"></script>
+</body>
+</html>
